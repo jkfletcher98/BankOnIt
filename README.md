@@ -9,15 +9,6 @@ string menu()
 	return response
 
 void start()
-	Asks for login info
-	if customer login
-		login successful
-		go to customer menu
-	if admin login
-		login successful
-		go to admin menu
-	else
-		login unsuccessful
 ```
 
 ## CheckingAccount
@@ -25,6 +16,7 @@ void start()
 double balance
 
 CheckingAccount()
+	initialize balance
 
 CheckingAccount(double balance)
 
@@ -32,9 +24,10 @@ void main()
 
 String main()
 
-String start()
+String start()	
 
 double getBalance()
+	return balance
 
 string getBalanceString()
 
@@ -45,8 +38,13 @@ void checkBalance()
 private double getDouble
 
 void makeDeposit()
+	ask for amount to deposit
+	add deposit to balance
+	print new balance
 
 void makeWithdrawal()
-
+	ask for withdrawal ammount
+	subtract withdrawal from balance
+	print new balance
 ```
 
