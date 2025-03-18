@@ -4,10 +4,6 @@ ATM-esque app
 ## HasMenu
 ```
 string menu()
-	menu gets 4 options based on what menu is currently open
-	string response gets input from menu
-	return response
-
 void start()
 ```
 
@@ -22,9 +18,15 @@ CheckingAccount(double balance)
 
 void main()
 
-String main()
+string  menu()
+	0) Quit
+	1) Check balance
+	2) Make a deposit
+	3) Make a withdrawal
 
-String start()	
+string start()
+	string response gets menu input
+	return response
 
 double getBalance()
 	return balance
