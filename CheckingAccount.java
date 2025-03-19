@@ -28,7 +28,12 @@ class CheckingAcount implements HasMenu {
 	} // end setBalance
 
 	public String getBalanceString(){
-		System.out.println(
+		System.out.println("$" + this.balance);
+	}// end getBalanceString
+
+	public void checkBalance(){
+		System.out.println("Currect balance: " + getBalanceString());
+	} //end checkBalance
 
 	public void makeDeposit(){
 		System.out.println("Deposit amount: ");
