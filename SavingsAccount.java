@@ -12,7 +12,7 @@ class SavingsAccount extends CheckingAccount {
 		return this.interestRate;
 	} // end getter
 
-	public void getInterestRate(double interestRate){
+	public void setInterestRate(double interestRate){
 		this.interestRate = interestRate;
 	} // end setter
 
