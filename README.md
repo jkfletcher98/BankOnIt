@@ -50,3 +50,17 @@ void makeWithdrawal()
 	print new balance
 ```
 
+## SavingsAccount
+```
+double interestRate
+
+main()
+	run calcInterest
+
+calcInterest()
+	interest gets balance * interestRate
+	add interest to balance
+
+setInterestRate()
+
+getInterestRate()
