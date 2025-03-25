@@ -1,6 +1,6 @@
-import java.util.*
+import java.util.*;
 
-abstract User implements HasMenu, Serializable {
+abstract class User implements HasMenu, Serializable {
 	String userName;
 	String PIN;
 
@@ -16,6 +16,24 @@ abstract User implements HasMenu, Serializable {
 		return PIN;
 	} // end getPIN
 
-	public vois setPIN(String PIN){
+	public void setPIN(String PIN){
 		this.PIN = PIN;
 	} // end setPIN
+
+	public boolean login(String userNameIn, String pinIn){
+		boolean result = false;
+		if (userNameIn.equals(this.userName)){
+			if (pinIn.equals(this.PIN)){
+				result = true;
+				System.out.println("Login successful!");
+			} else {
+				System.out.println("Incorrect PIN");
+			} // end if
+		} else {
+			System.out.println("Incorrect Username");
+		} // end if
+
+		return result;
+	} // end login
+
+} // end class
