@@ -79,3 +79,23 @@ class Bank implements HasMenu {
 			customer.getReport()
 		} // end for
 	} // end fullCustomerReport
+
+	public void addUser(){
+		Scanner input = new Scanner(System.in);
+		customer = new Customer;
+
+		System.out.println("New user username: ");
+		String userNameIn = input.nextLine();
+		customer.userName = UserNameIN;
+
+		System.out.println("New user PIN: ");
+		String pinIN = input.nextLine();
+		customer.PIN = pinIN;
+	} // end addUser
+
+	public void applyInterest(){
+		for (Customer customer; customers){
+			customer.calcInterest();
+		} // end for
+	} // end applyInterest
+} // end Bank
