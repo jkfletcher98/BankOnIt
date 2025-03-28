@@ -45,5 +45,10 @@ class Customer extends User {
 		this.PIN = newPIN;
 	} // end changePIN
 
+	public void getReport(){
+		System.out.println(this.userName);
+		System.out.println(this.PIN);
+	} // end getReport
+
 } // end Customer
 
