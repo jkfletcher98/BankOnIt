@@ -1,10 +1,9 @@
 import java.util.*;
+import java.util.ArrayList;
 
 class Bank implements HasMenu {
-	public Bank(){
-		Admin admin = "";
-		ArrayList customers = [];
-	} // end constructor
+	Admin admin = new Admin();
+	ArrayList<String> customers = new ArrayList();
 
 	public String menu(){
 		Scanner input = new Scanner(System.in);
@@ -20,11 +19,11 @@ class Bank implements HasMenu {
 		boolean keepGoing = true;
 		while (keepGoing){
 			String response = menu();
-			if (response.equal("0")){
+			if (response.equals("0")){
 				keepGoing = false;
 			} else if (response.equals("1")){
-				if (admin.login()){
-					adminMode = true;
+				if (admin.login(userNameIn, pinIn)){
+					boolean adminMode = true;
 					startAdmin();
 				} // end if
 			} else if (response.equals("2")){
@@ -48,7 +47,7 @@ class Bank implements HasMenu {
 			} else if (response.equals("3")){
 				this.applyInterest();
 			} else {
-				System.our.println("Please enter 0-3");
+				System.out.println("Please enter 0-3");
 			} // end if
 		} // end while
 	} // end startAdmin()
@@ -61,13 +60,13 @@ class Bank implements HasMenu {
 		String pinIN = input.nextLine();
 
 		Customer currentCustomer = null;
-		for (Customer customer; customers){
+		for (Customer customer; customers;){
 			if (customer.login(userNameIn, pinIN)){
 				currentCustomer = customer;
 			} // end if
 		} // end for
 
-		if (currentCustomer = null){
+		if (currentCustomer == null){
 			System.out.println("Customer not found");
 		} else {
 			currentCustomer.start();
@@ -75,26 +74,26 @@ class Bank implements HasMenu {
 	} // end loginAsCustomer
 
 	public void fullCustomerReport(){
-		for (Customer customer; customers){
-			customer.getReport()
+		for (Customer customer; customers;){
+			customer.getReport();
 		} // end for
 	} // end fullCustomerReport
 
 	public void addUser(){
 		Scanner input = new Scanner(System.in);
-		customer = new Customer;
+		customer = new Customer();
 
 		System.out.println("New user username: ");
 		String userNameIn = input.nextLine();
-		customer.userName = UserNameIN;
+		customer.userName = this.userNameIN;
 
 		System.out.println("New user PIN: ");
 		String pinIN = input.nextLine();
-		customer.PIN = pinIN;
+		customer.PIN = this.pinIN;
 	} // end addUser
 
 	public void applyInterest(){
-		for (Customer customer; customers){
+		for (Customer customer; customers;){
 			customer.calcInterest();
 		} // end for
 	} // end applyInterest
